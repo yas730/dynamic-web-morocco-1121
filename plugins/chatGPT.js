@@ -1,6 +1,6 @@
 import fetch from  'node-fetch'
 let handler = async (m, { text, usedPrefix, command }) => {
-if (!text) throw `بوبيزة اخيرا اصبحت تدعم ميزة الذكاء الاصطناعي: يمكنك الان البحث عن البحوث والعروض والترجمة والاجابة عن التمارين والأسئلة كيف ما كان نوعها و بكل اللغات \n شاهد هذا الفيديو لتعرف كيف تشغل هذه الميزة \n instagram.com/noureddine_ouafy`
+if (!text) throw ` اصبحت تدعم ميزة الذكاء الاصطناعي: يمكنك الان البحث عن البحوث والعروض والترجمة والاجابة عن التمارين والأسئلة كيف ما كان نوعها و بكل اللغات \n . \n instagram.com`
 try {
 let IA2 = await fetch(`https://api.amosayomide05.cf/gpt/?question=${text}&string_id=${m.sender}`)  
 let IAR2 = await IA2.json()
