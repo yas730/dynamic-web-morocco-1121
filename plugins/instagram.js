@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import instagramGetUrl from 'instagram-url-direct'
 import { instagramdl, instagramdlv2, instagramdlv3, instagramdlv4 } from '@bochilteam/scraper'
 let handler = async (m, { conn, args, command, usedPrefix }) => {
-if (!args[0]) throw `*هذا الامر خاص بالتحميل من الانستغرام \n, 𝙴xample: ${usedPrefix + command}* https://www.instagram.com/reel/Cr32gmlt2GF/?igshid=MzRlODBiNWFlZA==` 
+if (!args[0]) throw `*هذا الامر خاص بالتحميل من الانستغرام \n, 𝙴xample: ${usedPrefix + command}* https://www.instagram.com/reel/Cr32gmlt2GF/?igshid=MzRlزODBiNWFlZA==` 
 try {
 await m.reply(`*جاري تحميل الصورة أو الفيديو من الأنستغرام ...*`)
 switch (command) {        
@@ -11,7 +11,7 @@ let human = await fetch(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkeys
 let json = await human.json()
 let videoig = json.result
 let shortUrl1 = await (await fetch(`https://tinyurl.com/api-create.php?url=${args[0]}`)).text()
-let txt1 = `تابعني على الانستغرام\n  instagram.com/noureddine_ouafy\n \n🔗 *Url:* ${shortUrl1}`.trim()
+let txt1 = `.\n  instagram.com/\n \n🔗 *Url:* ${shortUrl1}`.trim()
 await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, m)
 break  
 case "instagramdl2": case "instagram2": case "igdl2": case "ig2":        
