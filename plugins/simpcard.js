@@ -8,7 +8,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 			let img = await q.download?.()
 			let out = await uploadImage(img)
 			let sim = global.API('https://some-random-api.com', '/canvas/simpcard', { avatar: out })
-            await conn.sendFile(m.chat, sim, 'bobiza.png', 'bobiza bot', m)
+            await conn.sendFile(m.chat, sim, '.', ' bot', m)
     	} catch (e) {
     		console.log(e)
     	}
