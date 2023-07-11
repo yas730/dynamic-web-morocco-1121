@@ -9,7 +9,7 @@ res = await fetch(API('https://api.ocr.space', '/parse/imageurl', { apikey: '8e6
 if (res.status !== 200) throw res.statusText
 let json = await res.json()
 m.reply(json?.ParsedResults?.[0]?.ParsedText)
-} else throw '*حذثت مشكلة راسل صاحب البوت وقل له ان هذه الميزة يجب عليك اصلاحها*\n instagram.com/noureddine_ouafy'
+} else throw '*حذثت مشكلة راسل صاحب البوت وقل له ان هذه الميزة يجب عليك اصلاحها*\n .'
 }
 handler.command = /^texte|totexto$/i
 export default handler
