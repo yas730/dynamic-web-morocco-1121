@@ -45,9 +45,9 @@ const handler = async (m, { conn, args, command }) => {
     await m.reply(`▢ Title: ${title}
 ▢ Resolution: ${selectedResolution}
 ▢ Size: ${size}
-▢ تم التحميل بنجاج !\n تابعني على الانستغرام للميزات من الميزات الرائعة \n instagram.com/noureddine_ouafy`)
+▢ تم التحميل بنجاج !\n . \n .`)
   } else {
-    await m.reply(`آسف لم يستطع البوت تحميل الفيديو رجاء أعد المحاولة لاحقا او راسل صاحب البوت.`)
+    await m.reply(`آسف لم يستطع البوت تحميل الفيديو  أعد المحاولة لاحقا او راسل صاحب البوت.`)
   }
 }
 
