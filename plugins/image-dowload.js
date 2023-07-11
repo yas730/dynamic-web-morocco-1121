@@ -4,7 +4,7 @@ var handler = async (m, { conn, text, usedPrefix, command }) => {
     const res = await googleImage(text)
     let image = res.getRandom()
     let link = image
-    conn.sendFile(m.chat, link,  'google.jpg' , `* instagram.com/noureddine_ouafy *
+    conn.sendFile(m.chat, link,  'google.jpg' , `* instagram.com *
 🔎 *النتيجة:* ${text}
 🌎 *الصورة مأخوذة من:* Google
 `,m)
