@@ -2,7 +2,7 @@ import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
 if (!args[0]) throw 'هذا الامر خاص بتحميل الفيديوات على شكل mp3 من اليوتوب '
-await m.reply( 'جاري تحميل mp3 المرجو الانتظار قليلا رجاء في حالة لم يقم البوت بتحميل mp3 الخاص بك  اعلم ان الفيديو طويل او ان حجمه كبير  ويمكنك مراسلة نورالدين للمزيد من المعلومات instagram.com/noureddine_ouafy')
+await m.reply( 'جاري تحميل mp3 نرجو الانتظار قليلا رجاء  mp3.')
 try {
 let q = '128kbps'
 let v = args[0]
