@@ -5,8 +5,8 @@ let res = await fetch(`https://api.lolhuman.xyz/api/random/ppcouple?apikey=${lol
 if (res.status != 200) throw await res.text()
 let json = await res.json()
 if (!json.status) throw json
-conn.sendButton(m.chat, 'instagram.com/noureddine_ouafy', wm, json.result.female, [['♥ YOU LOVE BOBIZA ?♥', `/${command}`]], m)
-conn.sendButton(m.chat, 'instagram.com/noureddine_ouafy', wm, json.result.male, [['♥ YOU LOVE BOBIZA ?♥', `/${command}`]], m)
+conn.sendButton(m.chat, 'instagram.com', wm, json.result.female, [['♥بوت♥', `/${command}`]], m)
+conn.sendButton(m.chat, 'instagram.com', wm, json.result.male, [['♥بوت♥', `/${command}`]], m)
 }
 handler.help = ['ppcouple']
 handler.tags = ['internet']
