@@ -6,11 +6,11 @@ let handler = async (m, { conn, args }) => {
 if (!args[0]) throw '*التحميل من غوغل درايف*' 
 try {
 GDriveDl(args[0]).then(async (res) => {
-conn.reply(m.chat, 'جاري تحميل الملف ارجوك يا صديقي تأكذ ان الملف الذي تريد تحميله لا يتجاوز 100 ميغا \n تابعني في الانستغرام \n instagram.com/noureddine_ouafy', m)
+conn.reply(m.chat, 'جاري تحميل الملف ارجوك تأكذ ان الملف الذي تريد تحميله لا يتجاوز 100 ميغا \n . \n .', m)
 if (!res) throw res
 conn.sendFile(m.chat, res.downloadUrl, res.fileName, '', m, null, { mimetype: res.mimetype, asDocument: true })})
 }catch(e){
-m.reply('*حذث خطأ راسل صاحب البوت ليصحح العطب*\n instagram.com/noureddine_ouafy')
+m.reply('*حذث خطأ *\n .')
 console.log(e)}}
 handler.command = /^(gdrive)$/i
 export default handler
