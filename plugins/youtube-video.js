@@ -1,8 +1,8 @@
 import { youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper'
 import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
-if (!args[0]) throw '*هذا الامر خاص بالتحميل من اليوتوب* مثال : \n *.yt* https://youtu.be/MJN8qQObH0s'
-await m.reply(`*جاري تحميل الفيديو المرجو الانتظار قليلا يا عزيزي* \n instagram.com/noureddine_ouafy`)
+if (!args[0]) throw '*هذا الامر خاص بالتحميل من اليوتوب* مثال : \n *.yt* https://youtu.be/MJNk8qQObH0s'
+await m.reply(`*جاري تحميل الفيديو نرجو الانتظار قليلا * \n .`)
 try {
 let qu = args[1] || '360'
 let q = qu + 'p'
@@ -22,7 +22,7 @@ let n3 = lolh.result.size
 let n4 = lolh.result.thumbnail
 await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `▢ 𝚃: ${n}\n▢ 𝙿: ${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch {
-await conn.reply(m.chat, 'تعذر تحميل الفيديو راسل نورالدين لتعرف السبب \n instagram.com/noureddine_ouafy', m)}
+await conn.reply(m.chat, 'تعذر تحميل الفيديو  \n .', m)}
 }}
 handler.command = /^video$/i
 export default handler
