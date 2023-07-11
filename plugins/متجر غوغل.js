@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 import translate from '@vitalets/google-translate-api'
 let handler = async (m, { conn, text, args }) => {
-if (!args[0]) throw `*البحثفي بلاي ستور (متجر غوغل)*`
+if (!args[0]) throw `*البحث في بلاي ستور (متجر غوغل)*`
 try {
 let enc = encodeURIComponent(text)
 let json = await fetch(`https://latam-api.vercel.app/api/playstore?apikey=brunosobrino&q=${enc}`)
@@ -15,7 +15,7 @@ conn.sendMessage(m.chat,{image:{url: gPlay.imagen},caption:`🔍: ${gPlay.titulo
 ✍️ D: ${gPlay.desarrollador}
 📈 P: ${gPlay.puntuacion}`},{quoted:m})
 } catch {
-await m.reply('*حذث خطأ تواصل مع صاحب البوت*')    
+await m.reply('*حذث خطأ *')    
 }}
 handler.help = ['playstore']
 handler.tags = ['internet']
