@@ -3,7 +3,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ""
 if (!/image/g.test(mime)) throw  '*Respond to a image* '
-m.reply('*تحويل صورة لأنيم* \n ثانية من وقتك تابع صاحب البوت في حسابه حتى تكون اول من يصله جديد البوتات و صاحب اول بوت عربي \n instagram.com/noureddine_ouafy ')    
+m.reply('*تحويل صورة لأنيم* \n . \n . ')    
 let data = await q.download?.()
 let image = await uploadImage(data)
 try {
