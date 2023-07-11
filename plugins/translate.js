@@ -14,15 +14,15 @@ text = args.join(' ')}
 if (!text && m.quoted && m.quoted.text) text = m.quoted.text
 try {      
 let result = await translate(`${text}`, { to: lang, autoCorrect: true })
-await m.reply('━━😄 مرحبا صديقي تابعني على الانستغرام \n instagram.com/noureddine_ouafy\n\n\n\n' + result.text)
+await m.reply('━━😄 مرحبا  \n .\n\n\n\n' + result.text)
 } catch {
 try {    
 let lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/${lang}?apikey=85faf717d0545d14074659ad&text=${text}`)
 let loll = await lol.json()
 let result2 = loll.result.translated
-await m.reply('*تفضل هذه ترجمتك سيدي \:* ' + result2)
+await m.reply('*تفضل هذه ترجمتك  \:* ' + result2)
 } catch { 
-await m.reply('*مشكلة أعد المحاولة لاحقا *')    
+await m.reply('* أعد المحاولة لاحقا *')    
 }}}
 handler.command = /^(translate|tr|ترجمة|traducir|trad)$/i
 export default handler
